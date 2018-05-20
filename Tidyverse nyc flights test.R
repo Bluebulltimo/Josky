@@ -18,7 +18,8 @@ library("tidyverse")
      
   #e. Arrived more than two hours late, but didn't leave late
      #!(x & y) is the same as !x | !y
-     #!(x | y) is the same as !x & !y // filter(flights, !(!(arr_delay > 2) | !(dep_delay <= 0)))
+     #!(x | y) is the same as !x & !y // 
+     filter(flights, !(!(arr_delay > 2) | !(dep_delay <= 0)))
      filter(flights, arr_delay > 2 & dep_delay <= 0)
      filter(flights, !(arr_delay <= 2 | dep_delay > 0))
 
