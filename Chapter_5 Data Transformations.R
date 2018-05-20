@@ -1,3 +1,4 @@
+#5. DATA TRANSFORMATION.
 library("nycflights13")
 library("tidyverse")
 
@@ -87,7 +88,7 @@ library("tidyverse")
 	select(flights, contains("TIME", ignore.case = FALSE))
 
 #1. Currently dep_time and sched_dep_time are convenient to look at, but
-#hard to compute with because they’re not really continuous numbers.
+#hard to compute with because they are not really continuous numbers.
 #Convert them to a more convenient representation of number of minutes
 #since midnight.
 	flights_sml <- flights %>% select(year:day,contains('dep'),contains('time'))
