@@ -103,3 +103,17 @@ library("tidyverse")
 #2. Compare air_time with arr_time - dep_time. What do you expect to
 #see? What do you see? What do you need to do to fix it?
 	flights_sml %>% mutate (diff_time = arr_time - dep_time, air_time = convert2mins (air_time)) 
+
+#3. Compare dep_time, sched_dep_time, and dep_delay. How would you
+#expect those three numbers to be related?
+
+#4. Find the 10 most delayed flights using a ranking function. How do you
+#want to handle ties? Carefully read the documentation for min_rank().
+  flights_sml %>%  mutate(delay_rank = min_rank(flights_sml$dep_delay)) %>% arrange(desc(delay_rank))
+
+#5. What does 1:3 + 1:10 return? Why?
+  1:3 + 1:10
+
+#6. What trigonometric functions does R provide?
+
+
